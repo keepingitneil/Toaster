@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="GeneralToastView" customModule="Toaster" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLA-zQ-Zpp">
+                    <rect key="frame" x="0.0" y="0.0" width="51" height="77"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="30" maxY="0.0"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressCloseButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ypy-cs-VPp"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Hello world" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bD3-lM-IdZ">
+                    <rect key="frame" x="0.0" y="0.0" width="326" height="77"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.99607843159999998" green="0.070588238540000001" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bD3-lM-IdZ" secondAttribute="bottom" id="2YI-kp-ReZ"/>
+                <constraint firstItem="bD3-lM-IdZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5oh-gI-8D7"/>
+                <constraint firstAttribute="bottom" secondItem="HLA-zQ-Zpp" secondAttribute="bottom" id="Id7-i0-B5Y"/>
+                <constraint firstAttribute="trailing" secondItem="bD3-lM-IdZ" secondAttribute="trailing" id="Thw-9Y-XI5"/>
+                <constraint firstItem="HLA-zQ-Zpp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gju-7v-CLM"/>
+                <constraint firstItem="bD3-lM-IdZ" firstAttribute="leading" secondItem="HLA-zQ-Zpp" secondAttribute="trailing" id="jFB-bE-5OB"/>
+                <constraint firstItem="HLA-zQ-Zpp" firstAttribute="leading" secondItem="bD3-lM-IdZ" secondAttribute="trailing" id="rqm-z1-qa2"/>
+                <constraint firstItem="HLA-zQ-Zpp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xdQ-fP-eTP"/>
+                <constraint firstItem="bD3-lM-IdZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="y0Z-oT-vKn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="rqm-z1-qa2"/>
+                    <exclude reference="jFB-bE-5OB"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="toastTextLabel" destination="bD3-lM-IdZ" id="cAT-X2-SGd"/>
+            </connections>
+            <point key="canvasLocation" x="215" y="11.5"/>
+        </view>
+    </objects>
+</document>
